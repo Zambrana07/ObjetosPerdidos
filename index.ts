@@ -1,7 +1,7 @@
 // Punto de entrada. Es el primer archivo que se ejecuta.
-// Aqui solo le decimos a Expo cual es el componente principal.
+// Todo el codigo de la app vive en la carpeta "codigo".
 import { registerRootComponent } from 'expo';
 
-import Aplicacion from './Aplicacion';
+import Aplicacion from './codigo/Aplicacion';
 
 registerRootComponent(Aplicacion);

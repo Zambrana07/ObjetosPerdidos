@@ -1,5 +1,8 @@
-// Datos de prueba para ver algo en la pantalla desde el primer momento.
-const objetosDeEjemplo = [
+// Datos de prueba para ver algo en pantalla desde el primer momento.
+// El tipo Objeto[] obliga a que cada elemento tenga id, titulo, lugar y descripcion.
+import type { Objeto } from './tipos';
+
+export const objetosDeEjemplo: Objeto[] = [
   {
     id: '1',
     titulo: 'Botella de agua azul',
@@ -19,5 +22,3 @@ const objetosDeEjemplo = [
     descripcion: 'Cuaderno de cuadros con apuntes hasta la pagina 40.',
   },
 ];
-
-export default objetosDeEjemplo;
