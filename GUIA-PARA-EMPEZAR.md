@@ -5,7 +5,7 @@
 En la carpeta del proyecto, una sola vez:
 
 ```powershell
-npm install
+npm install PROBAR
 ```
 
 ## 2. Abrir la pagina web
