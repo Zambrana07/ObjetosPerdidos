@@ -20,10 +20,6 @@ export default function PantallaLista({ objetos }: Props) {
         columnWrapperStyle={estilosLista.fila}
         ListEmptyComponent={<Text style={estilosLista.vacio}>Todavia no hay objetos publicados.</Text>}
       />
-
-      <View style={estilosLista.footerContenedor}>
-        <Text style={estilosLista.footer}>Hecho por José David Monge y Alexander Zambrana, CTP CIT 2026</Text>
-      </View>
     </View>
   );
 }

@@ -64,11 +64,6 @@ export default function PantallaPublicar({ onGuardar }: Props) {
           </View>
         </View>
       </ScrollView>
-
-      {/* 👇 footer fuera del ScrollView, fijo abajo */}
-      <View style={estilosPublicar.footerContenedor}>
-        <Text style={estilosPublicar.footer}>Hecho por José David Monge y Alexander Zambrana, CTP CIT 2026</Text>
-      </View>
     </View>
   );
 }

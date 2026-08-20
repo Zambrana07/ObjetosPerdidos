@@ -25,19 +25,19 @@ export default function Aplicacion() {
 
       <View style={estilosAplicacion.barraSuperior}>
         <Text style={estilosAplicacion.titulo}>Objetos Perdidos</Text>
-      </View>
 
-      <View style={estilosAplicacion.menu}>
-        <ComponenteBoton
-          texto="Ver objetos"
-          activo={pantallaActual === 'lista'}
-          onPress={() => setPantallaActual('lista')}
-        />
-        <ComponenteBoton
-          texto="Publicar objeto"
-          activo={pantallaActual === 'publicar'}
-          onPress={() => setPantallaActual('publicar')}
-        />
+        <View style={estilosAplicacion.menu}>
+          <ComponenteBoton
+            texto="Ver objetos"
+            activo={pantallaActual === 'lista'}
+            onPress={() => setPantallaActual('lista')}
+          />
+          <ComponenteBoton
+            texto="Publicar objeto"
+            activo={pantallaActual === 'publicar'}
+            onPress={() => setPantallaActual('publicar')}
+          />
+        </View>
       </View>
 
       <View style={estilosAplicacion.contenido}>
@@ -46,6 +46,9 @@ export default function Aplicacion() {
         ) : (
           <PantallaPublicar onGuardar={agregarObjeto} />
         )}
+      </View>
+      <View style={estilosAplicacion.footerContenedor}>
+        <Text style={estilosAplicacion.footer}>Realizado por José David Monge y Alexander Zambrana, CTP CIT 2026</Text>
       </View>
     </SafeAreaView>
   );

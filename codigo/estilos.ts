@@ -14,8 +14,12 @@ export const estilosAplicacion = StyleSheet.create({
     backgroundColor: colores.fondo,
   },
   barraSuperior: {
+    flexDirection: 'row',        // 👈 título y botones en fila
+    alignItems: 'center',        // 👈 centra verticalmente
+    justifyContent: 'space-between', // 👈 título a la izquierda, botones a la derecha
     paddingVertical: 20,
     paddingHorizontal: 16,
+    marginBottom: 16,
     backgroundColor: colores.principal,
   },
   titulo: {
@@ -26,17 +30,32 @@ export const estilosAplicacion = StyleSheet.create({
   menu: {
     flexDirection: 'row',
     gap: 8,
-    padding: 16,
+    // 👇 sacamos el padding: 16 que tenía antes,
+    // porque ahora el padding lo maneja barraSuperior
   },
   contenido: {
     flex: 1,
     paddingHorizontal: 16,
   },
+  footerContenedor: {
+    backgroundColor: colores.principal,
+    paddingVertical: 20,
+    width: '100%',
+    height: 80,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 16,
+  },
+  footer: {
+    fontSize: 15,
+    color: '#fff',
+    textAlign: 'center',
+  },
 });
 
 export const estilosBoton = StyleSheet.create({
   boton: {
-    backgroundColor: colores.principal,
+    backgroundColor: colores.principalAlt,
     paddingVertical: 10,
     paddingHorizontal: 16,
     alignItems: 'center',
@@ -102,20 +121,6 @@ export const estilosLista = StyleSheet.create({
     textAlign: 'center',
     marginTop: 24,
   },
-  footerContenedor: {
-    backgroundColor: colores.principal,
-    paddingVertical: 20,
-    marginTop: 16,
-    width: '100%',
-    height: 80,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  footer: {
-    fontSize: 15,
-    color: '#fff',
-    textAlign: 'center',
-  },
 });
 
 export const estilosPublicar = StyleSheet.create({
@@ -153,19 +158,5 @@ export const estilosPublicar = StyleSheet.create({
   aviso: {
     color: colores.error,
     marginBottom: 12,
-  },
-    footerContenedor: {
-    backgroundColor: colores.principal,
-    paddingVertical: 20,
-    marginTop: 16,
-    width: '100%',
-    height: 80,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  footer: {
-    fontSize: 15,
-    color: '#fff',
-    textAlign: 'center',
   },
 });

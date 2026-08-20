@@ -3,6 +3,7 @@
 
 export const colores = {
   principal: '#1f6feb',
+  principalAlt: '#071f43',
   fondo: '#f5f7fb',
   tarjeta: '#ffffff',
   texto: '#1b1f24',
