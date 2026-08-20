@@ -1,6 +1,5 @@
 // Muestra un objeto de la lista.
-import { Text, View } from 'react-native';
-
+import { View, Text, Image } from 'react-native';
 import { estilosTarjeta } from './estilos';
 import type { Objeto } from './tipos';
 
@@ -14,6 +13,10 @@ export default function ComponenteTarjeta({ objeto }: Props) {
       <Text style={estilosTarjeta.titulo}>{objeto.titulo}</Text>
       <Text style={estilosTarjeta.lugar}>{objeto.lugar}</Text>
       <Text style={estilosTarjeta.descripcion}>{objeto.descripcion}</Text>
+      <Image
+        source={require('./img/man.webp')} // 👈 ajusta la ruta según donde esté tu carpeta img
+        style={estilosTarjeta.imagen}
+      />
     </View>
   );
 }

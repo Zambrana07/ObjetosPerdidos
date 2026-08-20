@@ -39,6 +39,7 @@ export const estilosBoton = StyleSheet.create({
     backgroundColor: colores.principal,
     paddingVertical: 10,
     paddingHorizontal: 16,
+    alignItems: 'center',
     borderRadius: 8,
   },
   botonInactivo: {
@@ -79,12 +80,19 @@ export const estilosTarjeta = StyleSheet.create({
   descripcion: {
     color: colores.textoSuave,
   },
+  imagen: { // 👈 nuevo
+    flex: 1, // 👈 ocupa el espacio restante de la tarjeta
+    width: '100%',
+    borderRadius: 10,
+    marginTop: 8,
+    resizeMode: 'cover',
+  },
 });
 
 export const estilosLista = StyleSheet.create({
   fila: {
-    justifyContent: 'center', // 👈 en vez de space-between
-    gap: 15, // 👈 espacio fijo entre columnas (si tu versión de RN lo soporta)
+    justifyContent: 'center',
+    gap: 15,
   },
   vacio: {
     color: colores.textoSuave,
@@ -94,6 +102,17 @@ export const estilosLista = StyleSheet.create({
 });
 
 export const estilosPublicar = StyleSheet.create({
+  contenedor: {
+    width: '100%',
+    maxWidth: 500,
+    alignSelf: 'center',
+  },
+  contenedorBoton: {
+    width: '100%',
+    maxWidth: 200,
+    alignSelf: 'center',
+    marginTop: 8,
+  },
   etiqueta: {
     color: colores.texto,
     fontWeight: 'bold',
