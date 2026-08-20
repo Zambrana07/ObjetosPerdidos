@@ -60,7 +60,7 @@ export const estilosTarjeta = StyleSheet.create({
     backgroundColor: colores.tarjeta,
     borderWidth: 1,
     borderColor: colores.borde,
-    borderRadius: 10,
+    borderRadius: 15,
     padding: 14,
     marginBottom: 12,
   },
