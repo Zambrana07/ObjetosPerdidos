@@ -63,6 +63,8 @@ export const estilosTarjeta = StyleSheet.create({
     borderRadius: 15,
     padding: 14,
     marginBottom: 12,
+    aspectRatio: 1,
+    width: 280,
   },
   titulo: {
     fontSize: 16,
@@ -80,6 +82,10 @@ export const estilosTarjeta = StyleSheet.create({
 });
 
 export const estilosLista = StyleSheet.create({
+  fila: {
+    justifyContent: 'center', // 👈 en vez de space-between
+    gap: 15, // 👈 espacio fijo entre columnas (si tu versión de RN lo soporta)
+  },
   vacio: {
     color: colores.textoSuave,
     textAlign: 'center',

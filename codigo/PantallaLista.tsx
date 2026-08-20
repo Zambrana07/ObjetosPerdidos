@@ -15,6 +15,8 @@ export default function PantallaLista({ objetos }: Props) {
       data={objetos}
       keyExtractor={(objeto) => objeto.id}
       renderItem={({ item }) => <ComponenteTarjeta objeto={item} />}
+      numColumns={5} // 👈 cantidad de columnas
+      columnWrapperStyle={estilosLista.fila} // 👈 estilo para cada fila
       ListEmptyComponent={<Text style={estilosLista.vacio}>Todavia no hay objetos publicados.</Text>}
     />
   );

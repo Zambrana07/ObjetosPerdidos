@@ -21,4 +21,40 @@ export const objetosDeEjemplo: Objeto[] = [
     lugar: 'Salon 204',
     descripcion: 'Cuaderno de cuadros con apuntes hasta la pagina 40.',
   },
+  {
+    id: '4',
+    titulo: 'Botella de agua azul',
+    lugar: 'Biblioteca, segundo piso',
+    descripcion: 'Botella metalica con una calcomania de un gato.',
+  },
+  {
+    id: '5',
+    titulo: 'Llaves con llavero rojo',
+    lugar: 'Cafeteria',
+    descripcion: 'Tres llaves y una tarjeta de acceso.',
+  },
+  {
+    id: '6',
+    titulo: 'Cuaderno de matematicas',
+    lugar: 'Salon 204',
+    descripcion: 'Cuaderno de cuadros con apuntes hasta la pagina 40.',
+  },
+  {
+    id: '7',
+    titulo: 'Botella de agua azul',
+    lugar: 'Biblioteca, segundo piso',
+    descripcion: 'Botella metalica con una calcomania de un gato.',
+  },
+  {
+    id: '8',
+    titulo: 'Llaves con llavero rojo',
+    lugar: 'Cafeteria',
+    descripcion: 'Tres llaves y una tarjeta de acceso.',
+  },
+  {
+    id: '9',
+    titulo: 'Cuaderno de matematicas',
+    lugar: 'Salon 204',
+    descripcion: 'Cuaderno de cuadros con apuntes hasta la pagina 40.',
+  },
 ];

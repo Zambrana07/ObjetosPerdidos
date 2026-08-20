@@ -56,6 +56,8 @@ export default function PantallaPublicar({ onGuardar }: Props) {
         multiline
       />
 
+      
+
       {aviso !== '' && <Text style={estilosPublicar.aviso}>{aviso}</Text>}
 
       <ComponenteBoton texto="Publicar" onPress={guardar} />
