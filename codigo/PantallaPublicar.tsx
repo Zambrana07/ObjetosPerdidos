@@ -29,39 +29,46 @@ export default function PantallaPublicar({ onGuardar }: Props) {
   }
 
   return (
-    <ScrollView>
-      <View style={estilosPublicar.contenedor}>
-        <Text style={estilosPublicar.etiqueta}>Que objeto es?</Text>
-        <TextInput
-          style={estilosPublicar.campo}
-          value={titulo}
-          onChangeText={setTitulo}
-          placeholder="Mochila negra"
-        />
+    <View style={estilosPublicar.pantalla}> {/* 👈 nuevo contenedor exterior */}
+      <ScrollView>
+        <View style={estilosPublicar.contenedor}>
+          <Text style={estilosPublicar.etiqueta}>Que objeto es?</Text>
+          <TextInput
+            style={estilosPublicar.campo}
+            value={titulo}
+            onChangeText={setTitulo}
+            placeholder="Mochila negra"
+          />
 
-        <Text style={estilosPublicar.etiqueta}>Donde lo encontraste?</Text>
-        <TextInput
-          style={estilosPublicar.campo}
-          value={lugar}
-          onChangeText={setLugar}
-          placeholder="Salon 101"
-        />
+          <Text style={estilosPublicar.etiqueta}>Donde lo encontraste?</Text>
+          <TextInput
+            style={estilosPublicar.campo}
+            value={lugar}
+            onChangeText={setLugar}
+            placeholder="Salon 101"
+          />
 
-        <Text style={estilosPublicar.etiqueta}>Descripcion</Text>
-        <TextInput
-          style={[estilosPublicar.campo, estilosPublicar.campoGrande]}
-          value={descripcion}
-          onChangeText={setDescripcion}
-          placeholder="Detalles que ayuden a identificarlo"
-          multiline
-        />
+          <Text style={estilosPublicar.etiqueta}>Descripcion</Text>
+          <TextInput
+            style={[estilosPublicar.campo, estilosPublicar.campoGrande]}
+            value={descripcion}
+            onChangeText={setDescripcion}
+            placeholder="Detalles que ayuden a identificarlo"
+            multiline
+          />
 
-        {aviso !== '' && <Text style={estilosPublicar.aviso}>{aviso}</Text>}
+          {aviso !== '' && <Text style={estilosPublicar.aviso}>{aviso}</Text>}
 
-        <View style={estilosPublicar.contenedorBoton}>
-          <ComponenteBoton texto="Publicar" onPress={guardar} />
+          <View style={estilosPublicar.contenedorBoton}>
+            <ComponenteBoton texto="Publicar" onPress={guardar} />
+          </View>
         </View>
+      </ScrollView>
+
+      {/* 👇 footer fuera del ScrollView, fijo abajo */}
+      <View style={estilosPublicar.footerContenedor}>
+        <Text style={estilosPublicar.footer}>Hecho por José David Monge y Alexander Zambrana, CTP CIT 2026</Text>
       </View>
-    </ScrollView>
+    </View>
   );
 }

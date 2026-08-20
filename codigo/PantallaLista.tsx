@@ -1,5 +1,5 @@
 // Pantalla que lista todos los objetos reportados.
-import { FlatList, Text } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 
 import ComponenteTarjeta from './ComponenteTarjeta';
 import { estilosLista } from './estilos';
@@ -11,13 +11,19 @@ type Props = {
 
 export default function PantallaLista({ objetos }: Props) {
   return (
-    <FlatList
-      data={objetos}
-      keyExtractor={(objeto) => objeto.id}
-      renderItem={({ item }) => <ComponenteTarjeta objeto={item} />}
-      numColumns={5} // 👈 cantidad de columnas
-      columnWrapperStyle={estilosLista.fila} // 👈 estilo para cada fila
-      ListEmptyComponent={<Text style={estilosLista.vacio}>Todavia no hay objetos publicados.</Text>}
-    />
+    <View style={estilosLista.pantalla}>
+      <FlatList
+        data={objetos}
+        keyExtractor={(objeto) => objeto.id}
+        renderItem={({ item }) => <ComponenteTarjeta objeto={item} />}
+        numColumns={5}
+        columnWrapperStyle={estilosLista.fila}
+        ListEmptyComponent={<Text style={estilosLista.vacio}>Todavia no hay objetos publicados.</Text>}
+      />
+
+      <View style={estilosLista.footerContenedor}>
+        <Text style={estilosLista.footer}>Hecho por José David Monge y Alexander Zambrana, CTP CIT 2026</Text>
+      </View>
+    </View>
   );
 }

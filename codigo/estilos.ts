@@ -90,6 +90,9 @@ export const estilosTarjeta = StyleSheet.create({
 });
 
 export const estilosLista = StyleSheet.create({
+  pantalla: { // 👈 nuevo
+    flex: 1, // ocupa toda la altura disponible
+  },
   fila: {
     justifyContent: 'center',
     gap: 15,
@@ -99,9 +102,26 @@ export const estilosLista = StyleSheet.create({
     textAlign: 'center',
     marginTop: 24,
   },
+  footerContenedor: {
+    backgroundColor: colores.principal,
+    paddingVertical: 20,
+    marginTop: 16,
+    width: '100%',
+    height: 80,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footer: {
+    fontSize: 15,
+    color: '#fff',
+    textAlign: 'center',
+  },
 });
 
 export const estilosPublicar = StyleSheet.create({
+  pantalla: { // 👈 nuevo
+    flex: 1, // ocupa toda la altura disponible
+  },
   contenedor: {
     width: '100%',
     maxWidth: 500,
@@ -133,5 +153,19 @@ export const estilosPublicar = StyleSheet.create({
   aviso: {
     color: colores.error,
     marginBottom: 12,
+  },
+    footerContenedor: {
+    backgroundColor: colores.principal,
+    paddingVertical: 20,
+    marginTop: 16,
+    width: '100%',
+    height: 80,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footer: {
+    fontSize: 15,
+    color: '#fff',
+    textAlign: 'center',
   },
 });
